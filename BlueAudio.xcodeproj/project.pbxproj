@@ -13,6 +13,12 @@
 		11D4B5D820C79A5A00232A01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11D4B5D720C79A5A00232A01 /* Assets.xcassets */; };
 		11D4B5DB20C79A5A00232A01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11D4B5D920C79A5A00232A01 /* LaunchScreen.storyboard */; };
 		11D4B5DE20C79A5A00232A01 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D4B5DD20C79A5A00232A01 /* main.m */; };
+		11D4B5E620C79B1200232A01 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11D4B5E520C79B1200232A01 /* AVFoundation.framework */; };
+		11D4B5E920C7C48600232A01 /* BLEManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D4B5E820C7C48600232A01 /* BLEManager.m */; };
+		11D4B5ED20C7C65900232A01 /* BLEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D4B5EB20C7C65900232A01 /* BLEViewController.m */; };
+		11D4B5EE20C7C65900232A01 /* BLEViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11D4B5EC20C7C65900232A01 /* BLEViewController.xib */; };
+		11D4B5F220C7C71600232A01 /* PeriperalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D4B5F020C7C71600232A01 /* PeriperalTableViewCell.m */; };
+		11D4B5F320C7C71600232A01 /* PeriperalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11D4B5F120C7C71600232A01 /* PeriperalTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,15 @@
 		11D4B5DA20C79A5A00232A01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11D4B5DC20C79A5A00232A01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11D4B5DD20C79A5A00232A01 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		11D4B5E520C79B1200232A01 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		11D4B5E720C7C48600232A01 /* BLEManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLEManager.h; sourceTree = "<group>"; };
+		11D4B5E820C7C48600232A01 /* BLEManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLEManager.m; sourceTree = "<group>"; };
+		11D4B5EA20C7C65900232A01 /* BLEViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLEViewController.h; sourceTree = "<group>"; };
+		11D4B5EB20C7C65900232A01 /* BLEViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLEViewController.m; sourceTree = "<group>"; };
+		11D4B5EC20C7C65900232A01 /* BLEViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BLEViewController.xib; sourceTree = "<group>"; };
+		11D4B5EF20C7C71600232A01 /* PeriperalTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PeriperalTableViewCell.h; sourceTree = "<group>"; };
+		11D4B5F020C7C71600232A01 /* PeriperalTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeriperalTableViewCell.m; sourceTree = "<group>"; };
+		11D4B5F120C7C71600232A01 /* PeriperalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeriperalTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11D4B5E620C79B1200232A01 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +60,7 @@
 			children = (
 				11D4B5CD20C79A5900232A01 /* BlueAudio */,
 				11D4B5CC20C79A5900232A01 /* Products */,
+				11D4B5E420C79B1200232A01 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +75,16 @@
 		11D4B5CD20C79A5900232A01 /* BlueAudio */ = {
 			isa = PBXGroup;
 			children = (
+				11D4B5EA20C7C65900232A01 /* BLEViewController.h */,
+				11D4B5EB20C7C65900232A01 /* BLEViewController.m */,
+				11D4B5EC20C7C65900232A01 /* BLEViewController.xib */,
+				11D4B5EF20C7C71600232A01 /* PeriperalTableViewCell.h */,
+				11D4B5F020C7C71600232A01 /* PeriperalTableViewCell.m */,
+				11D4B5F120C7C71600232A01 /* PeriperalTableViewCell.xib */,
 				11D4B5CE20C79A5900232A01 /* AppDelegate.h */,
 				11D4B5CF20C79A5900232A01 /* AppDelegate.m */,
+				11D4B5E720C7C48600232A01 /* BLEManager.h */,
+				11D4B5E820C7C48600232A01 /* BLEManager.m */,
 				11D4B5D120C79A5900232A01 /* ViewController.h */,
 				11D4B5D220C79A5900232A01 /* ViewController.m */,
 				11D4B5D420C79A5900232A01 /* Main.storyboard */,
@@ -69,6 +94,14 @@
 				11D4B5DD20C79A5A00232A01 /* main.m */,
 			);
 			path = BlueAudio;
+			sourceTree = "<group>";
+		};
+		11D4B5E420C79B1200232A01 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11D4B5E520C79B1200232A01 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,8 +161,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11D4B5EE20C7C65900232A01 /* BLEViewController.xib in Resources */,
 				11D4B5DB20C79A5A00232A01 /* LaunchScreen.storyboard in Resources */,
 				11D4B5D820C79A5A00232A01 /* Assets.xcassets in Resources */,
+				11D4B5F320C7C71600232A01 /* PeriperalTableViewCell.xib in Resources */,
 				11D4B5D620C79A5900232A01 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +177,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				11D4B5D320C79A5900232A01 /* ViewController.m in Sources */,
+				11D4B5ED20C7C65900232A01 /* BLEViewController.m in Sources */,
+				11D4B5F220C7C71600232A01 /* PeriperalTableViewCell.m in Sources */,
+				11D4B5E920C7C48600232A01 /* BLEManager.m in Sources */,
 				11D4B5DE20C79A5A00232A01 /* main.m in Sources */,
 				11D4B5D020C79A5900232A01 /* AppDelegate.m in Sources */,
 			);
@@ -283,7 +321,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = DQ7WAE25WZ;
 				INFOPLIST_FILE = BlueAudio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -291,6 +330,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bing.BlueAudio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "43c40c8b-2ef6-46ae-9cad-b18475b48633";
+				PROVISIONING_PROFILE_SPECIFIER = all_pattern;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -299,7 +340,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = BlueAudio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -307,6 +349,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bing.BlueAudio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
