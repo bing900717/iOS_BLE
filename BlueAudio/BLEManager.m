@@ -154,6 +154,8 @@
     }
     
     NSLog(@"data = %@",characteristic.value);
+    Byte *byes = characteristic.value.bytes;
+    NSLog(@"%s",byes);
 
 }
 

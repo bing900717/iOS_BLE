@@ -58,6 +58,48 @@
 }
 
 
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+    [self becomeFirstResponder];
+}
+
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+
+- (void)remoteControlReceivedWithEvent:(UIEvent *)theEvent
+{
+    if (theEvent.type == UIEventTypeRemoteControl)
+    {
+        switch(theEvent.subtype) {
+            case UIEventSubtypeRemoteControlTogglePlayPause:
+                //Insert code
+                
+                break;
+            case UIEventSubtypeRemoteControlPlay:
+                //Insert code
+                NSLog(@"play");
+                break;
+            case UIEventSubtypeRemoteControlPause:
+                // Insert code
+                NSLog(@"pause");
+                break;
+            case UIEventSubtypeRemoteControlStop:
+                //Insert code.
+                NSLog(@"stop");
+                break;
+            default:
+                return;
+        }
+    }
+}
+
+
+
 - (void)receiveNotification:(NSNotification *)notification
 {
     

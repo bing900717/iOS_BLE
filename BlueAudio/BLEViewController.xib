@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BLEViewController">
             <connections>
+                <outlet property="connectClassicSwitch" destination="2e6-Rd-xBA" id="Rio-2H-2ul"/>
                 <outlet property="connectSwitch" destination="POQ-VS-dcM" id="U7A-qR-mdt"/>
                 <outlet property="powerOnSwitch" destination="Aaa-IJ-Jn6" id="tkI-X5-1Hy"/>
                 <outlet property="tableView" destination="i4W-X3-OIu" id="wn9-6d-3La"/>
@@ -24,40 +25,54 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eCd-Hh-fEi">
-                    <rect key="frame" x="122" y="60" width="131" height="62"/>
+                    <rect key="frame" x="97.5" y="60" width="181" height="93"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UzV-6p-pf1">
-                            <rect key="frame" x="0.0" y="0.0" width="131" height="31"/>
+                            <rect key="frame" x="0.0" y="0.0" width="181" height="31"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="isPowerOn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdh-oN-5hg">
-                                    <rect key="frame" x="0.0" y="0.0" width="82" height="31"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="132" height="31"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Aaa-IJ-Jn6">
-                                    <rect key="frame" x="82" y="0.0" width="51" height="31"/>
+                                    <rect key="frame" x="132" y="0.0" width="51" height="31"/>
                                 </switch>
                             </subviews>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gO6-io-2Jv">
-                            <rect key="frame" x="0.0" y="31" width="131" height="31"/>
+                            <rect key="frame" x="0.0" y="31" width="181" height="31"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="isConnect" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mUl-Sn-Bp8">
-                                    <rect key="frame" x="0.0" y="0.0" width="82" height="31"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="isConnectBLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mUl-Sn-Bp8">
+                                    <rect key="frame" x="0.0" y="0.0" width="132" height="31"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="POQ-VS-dcM">
-                                    <rect key="frame" x="82" y="0.0" width="51" height="31"/>
+                                    <rect key="frame" x="132" y="0.0" width="51" height="31"/>
+                                </switch>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8fb-KZ-Ndh">
+                            <rect key="frame" x="0.0" y="62" width="181" height="31"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="isConnectClassic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOw-tN-FqN">
+                                    <rect key="frame" x="0.0" y="0.0" width="132" height="31"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2e6-Rd-xBA">
+                                    <rect key="frame" x="132" y="0.0" width="51" height="31"/>
                                 </switch>
                             </subviews>
                         </stackView>
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="EMX-No-5Fi">
-                    <rect key="frame" x="159.5" y="142" width="56" height="60"/>
+                    <rect key="frame" x="159.5" y="173" width="56" height="60"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXf-G6-ton">
                             <rect key="frame" x="0.0" y="0.0" width="33" height="30"/>

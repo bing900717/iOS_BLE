@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		118EE69520C8CC9C0054AF29 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 118EE69420C8CC9C0054AF29 /* MediaPlayer.framework */; };
 		11D4B5D020C79A5900232A01 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D4B5CF20C79A5900232A01 /* AppDelegate.m */; };
 		11D4B5D320C79A5900232A01 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D4B5D220C79A5900232A01 /* ViewController.m */; };
 		11D4B5D620C79A5900232A01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11D4B5D420C79A5900232A01 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		118EE69420C8CC9C0054AF29 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		11D4B5CB20C79A5900232A01 /* BlueAudio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlueAudio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11D4B5CE20C79A5900232A01 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		11D4B5CF20C79A5900232A01 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -48,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				118EE69520C8CC9C0054AF29 /* MediaPlayer.framework in Frameworks */,
 				11D4B5E620C79B1200232A01 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -99,6 +102,7 @@
 		11D4B5E420C79B1200232A01 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				118EE69420C8CC9C0054AF29 /* MediaPlayer.framework */,
 				11D4B5E520C79B1200232A01 /* AVFoundation.framework */,
 			);
 			name = Frameworks;
@@ -135,6 +139,11 @@
 				TargetAttributes = {
 					11D4B5CA20C79A5900232A01 = {
 						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
