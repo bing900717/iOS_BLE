@@ -72,7 +72,7 @@
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="EMX-No-5Fi">
-                    <rect key="frame" x="159.5" y="173" width="56" height="60"/>
+                    <rect key="frame" x="159.5" y="173" width="56" height="90"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXf-G6-ton">
                             <rect key="frame" x="0.0" y="0.0" width="33" height="30"/>
@@ -86,6 +86,13 @@
                             <state key="normal" title="connect"/>
                             <connections>
                                 <action selector="connectPeripheral:" destination="-1" eventType="touchUpInside" id="afG-mh-aTK"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VCa-hB-ZrJ" userLabel="stop">
+                            <rect key="frame" x="0.0" y="60" width="31" height="30"/>
+                            <state key="normal" title="stop"/>
+                            <connections>
+                                <action selector="stopConnect:" destination="-1" eventType="touchUpInside" id="7rJ-tf-92P"/>
                             </connections>
                         </button>
                     </subviews>

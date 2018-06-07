@@ -13,5 +13,6 @@
 + (instancetype)sharedManager;
 - (void)scanPeripherals;
 - (void)connectToPeripheral;
+- (void)stopConnecting;
 
 @end

@@ -28,61 +28,100 @@
     [[BLEManager sharedManager] scanPeripherals];
     // Do any additional setup after loading the view from its nib.
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
+    [[AVAudioSession sharedInstance] setActive:YES error:nil];
     [self.connectClassicSwitch setOn:[self isBleToothOutput]];
-    
-    [[MPRemoteCommandCenter sharedCommandCenter].togglePlayPauseCommand addTarget:self action:@selector(onTooglePlayPause:)];
-
-    
-    
-    
 }
-
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
-    [self becomeFirstResponder];
     
+    [MPRemoteCommandCenter sharedCommandCenter].togglePlayPauseCommand.enabled = YES;
+    [MPRemoteCommandCenter sharedCommandCenter].pauseCommand.enabled = YES;
+    [MPRemoteCommandCenter sharedCommandCenter].playCommand.enabled = YES;
+
+    
+    [[MPRemoteCommandCenter sharedCommandCenter].togglePlayPauseCommand addTarget:self action:@selector(onPlayOrPause)];
+    [[MPRemoteCommandCenter sharedCommandCenter].pauseCommand addTarget:self action:@selector(onPause)];
+    [[MPRemoteCommandCenter sharedCommandCenter].playCommand addTarget:self action:@selector(onPlay)];
+    
+//    [self becomeFirstResponder];
 }
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [[UIApplication sharedApplication] endReceivingRemoteControlEvents];
+    [[MPRemoteCommandCenter sharedCommandCenter].togglePlayPauseCommand removeTarget:self];
+    [[MPRemoteCommandCenter sharedCommandCenter].pauseCommand removeTarget:self];
+    [[MPRemoteCommandCenter sharedCommandCenter].playCommand removeTarget:self];
+}
+
+
+- (void)onPlayOrPause
+{
+    NSLog(@"%s",__FUNCTION__);
+}
+
+- (void)onPlay
+{
+    NSLog(@"%s",__FUNCTION__);
+}
+
+- (void)onPause
+{
+    NSLog(@"%s",__FUNCTION__);
+}
+
+
+
+//- (void)viewWillAppear:(BOOL)animated
+//{
+//    [super viewWillAppear:animated];
+//    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+//    [self becomeFirstResponder];
+//
+//}
 
 - (BOOL)canBecomeFirstResponder
 {
     return YES;
 }
 
-- (void)onTooglePlayPause:(id)sender
-{
+
+- (IBAction)stopConnect:(id)sender {
     
+    [[BLEManager sharedManager] stopConnecting];
 }
 
-- (void)remoteControlReceivedWithEvent:(UIEvent *)theEvent
-{
-    if (theEvent.type == UIEventTypeRemoteControl)
-    {
-        switch(theEvent.subtype) {
-            case UIEventSubtypeRemoteControlTogglePlayPause:
-                //Insert code
-                
-                break;
-            case UIEventSubtypeRemoteControlPlay:
-                //Insert code
-                NSLog(@"play");
-                break;
-            case UIEventSubtypeRemoteControlPause:
-                // Insert code
-                NSLog(@"pause");
-                break;
-            case UIEventSubtypeRemoteControlStop:
-                //Insert code.
-                NSLog(@"stop");
-                break;
-            default:
-                return;
-        }
-    }
-}
-
+//- (void)remoteControlReceivedWithEvent:(UIEvent *)theEvent
+//{
+//    if (theEvent.type == UIEventTypeRemoteControl)
+//    {
+//        switch(theEvent.subtype) {
+//            case UIEventSubtypeRemoteControlTogglePlayPause:
+//                //Insert code
+//
+//                break;
+//            case UIEventSubtypeRemoteControlPlay:
+//                //Insert code
+//                NSLog(@"play");
+//                break;
+//            case UIEventSubtypeRemoteControlPause:
+//                // Insert code
+//                NSLog(@"pause");
+//                break;
+//            case UIEventSubtypeRemoteControlStop:
+//                //Insert code.
+//                NSLog(@"stop");
+//                break;
+//            default:
+//                return;
+//        }
+//    }
+//}
+//
 
 
 

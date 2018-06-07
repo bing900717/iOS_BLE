@@ -65,6 +65,25 @@
     [self.centerManager connectPeripheral:self.peripheral options:nil];
 }
 
+- (void)stopConnecting
+{
+    // See if we are subscribed to a characteristic on the peripheral
+    if (self.peripheral.services != nil) {
+        for (CBService *service in self.peripheral.services) {
+            if (service.characteristics != nil) {
+                for (CBCharacteristic *characteristic in service.characteristics) {
+                    if (characteristic.isNotifying) {
+                        [self.peripheral setNotifyValue:NO forCharacteristic:characteristic];
+                    }
+                    
+                }
+            }
+        }
+    }
+    // If we've got this far, we're connected, but we're not subscribed, so we just disconnect
+    [self.centerManager cancelPeripheralConnection:self.peripheral];
+}
+
 
 #pragma mark - CBCentralManagerDelegate
 
@@ -145,6 +164,7 @@
     
 //    NSLog(@"data = %@",characteristic.value);
 }
+
 
 
 - (void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error

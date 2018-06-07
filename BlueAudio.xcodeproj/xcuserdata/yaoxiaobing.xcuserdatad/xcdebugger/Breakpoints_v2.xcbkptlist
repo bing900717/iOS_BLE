@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BlueAudio/BLEViewController.m"
-            timestampString = "550034591.025022"
+            timestampString = "550063171.115476"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "-onTooglePlayPause:"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "-onPlayOrPause"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +26,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BlueAudio/BLEViewController.m"
-            timestampString = "550034591.025079"
+            timestampString = "550063171.115814"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "-remoteControlReceivedWithEvent:"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "-onPlay"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BlueAudio/BLEViewController.m"
+            timestampString = "550063171.116104"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "-onPause"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
