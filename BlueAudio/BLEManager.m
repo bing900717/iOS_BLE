@@ -95,6 +95,9 @@
             NSLog(@"开机，正常");
             [self scanPeripherals];
             break;
+        case CBManagerStatePoweredOff:
+            NSLog(@"蓝牙关机");
+            break;
         default:
             NSLog(@"手机蓝牙异常，请打开");
             break;

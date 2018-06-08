@@ -123,6 +123,13 @@
 //}
 //
 
+- (IBAction)showDevices:(id)sender {
+    
+    AVAudioSessionRouteDescription *currentRount = [AVAudioSession sharedInstance].currentRoute;
+    for (AVAudioSessionPortDescription *port in currentRount.outputs) {
+        NSLog(@"device name = %@",port.portName);
+    }
+}
 
 
 -(BOOL)isBleToothOutput
